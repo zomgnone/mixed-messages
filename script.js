@@ -1,0 +1,110 @@
+const content = {
+  verbs: [
+    'Galloping',
+    'Crying',
+    'Enlightening',
+    'Darkening',
+    'Fly',
+    'Rise',
+    'Reflects',
+    'Climb',
+    'Burn',
+    'Redeem',
+    'Power',
+    'Guide',
+    'Standing',
+    'Blazing',
+    'Reaching',
+    'Searching'
+  ],
+  adverbs: [
+    'Triumphantly',
+    'Quickly',
+    'Eternally',
+    'Brightly',
+    'Vengefully',
+    'Courageously',
+    'Defiantly',
+    'Gracefully',
+    'Solemnly',
+    'Viciously',
+    'Sorrowfully',
+    'Bravely',
+    'Mysteriously',
+    'Violently',
+    'Frantically',
+    'Wildly'
+  ],
+  prepositions: [
+    'Through',
+    'Into',
+    'Above',
+    'Beneath',
+    'Beyond',
+    'Amongst',
+    'Below',
+    'Under',
+    'In',
+    'Against',
+    'Within',
+    'Inside',
+    'Before',
+    'Outside'
+  ],
+  adjectives: [
+    'Snowy',
+    'Shining',
+    'Glowing',
+    'Ancient',
+    'Rising',
+    'Crystal',
+    'Fantastical',
+    'Soulful',
+    'Aggressive',
+    'Courageous',
+    'Defiant',
+    'Bloody',
+    'Graceful',
+    'Misty',
+    'Icy',
+    'Glorious'
+  ],
+  nouns: [
+    'Moonlight',
+    'Darkness',
+    'Defenders',
+    'Wings',
+    'Light',
+    'Fields',
+    'Destiny',
+    'Sun',
+    'Heavens',
+    'Souls',
+    'Sunlight',
+    'Battle Cry',
+    'Night',
+    'Skies',
+    'Dream',
+    'Clouds',
+    'Path',
+    'Ice',
+    'Mountain',
+    'Plains',
+    'Hearts',
+    'Stars',
+    'Fire',
+    'Lands',
+    'Abyss'
+  ],
+  genRandomIndex(n) {
+    return Math.floor(Math.random() * n);
+  },
+  genWord(words) {
+    return words[this.genRandomIndex(words.length)];
+  },
+  genSentence() {
+    console.log(`${this.genWord(this.verbs)} ${this.genWord(this.adverbs).toLowerCase()} ${this.genWord(this.prepositions).toLowerCase()} ${this.genWord(this.adjectives).toLowerCase()} ${this.genWord(this.nouns).toLowerCase()}.`);
+  }
+}
+
+content.genSentence();
